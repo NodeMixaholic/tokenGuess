@@ -11,8 +11,10 @@ function guessToken(id) {
     return btoa(id) + "." + btoa(Math.floor(Date.now() / 1000) + 1293840000) + "." + guessHMAC();
 }
 
-let id = prompt("Please enter a person's numeric discord ID")
+async function main() {
+let id = await prompt("Please enter a person's numeric discord ID")
 while (true) {
 console.log(guessToken(id))
 await new Promise(r => setTimeout(r, 2000));
+}
 }
