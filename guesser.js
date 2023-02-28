@@ -8,7 +8,7 @@ function guessToken(id) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
       counter += 1;
     }
-    return btoa(id) + "." + btoa(Math.floor(Date.now() / 1000) + 1293840000) + "." + guessHMAC();
+    return btoa(id) + "." + btoa(Math.floor(Date.now() / 1000) + 1293840000) + "." + result;
 }
 
 async function main() {
